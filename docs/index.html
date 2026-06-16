@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テニス試合結果</title>
+<title>福岡＋αテニス試合情報結果</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.1.0/dist/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:#f4f4f2;color:#1a1a1a;line-height:1.5;padding:12px;max-width:480px;margin:0 auto}
 h1{font-size:18px;font-weight:600;margin-bottom:2px;color:#0f6e56}
-.sub{font-size:11px;color:#999;margin-bottom:14px}
+.sub{font-size:11px;color:#999;margin-bottom:8px}
+.link-btn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#0f6e56;background:#E1F5EE;border:0.5px solid #b8e0d4;border-radius:8px;padding:8px 14px;text-decoration:none;margin-bottom:14px}
+.link-btn:active{background:#cdeee2}
+.cat-tabs{display:flex;gap:6px;margin-bottom:14px}
+.cat-tab{flex:1;text-align:center;font-size:13px;font-weight:600;padding:8px 0;border-radius:8px;border:0.5px solid #e0e0dc;background:#fff;color:#666;cursor:pointer}
+.cat-tab.active{background:#0f6e56;color:#fff;border-color:#0f6e56}
 .year{margin-bottom:10px}
 .year-summary{list-style:none;display:flex;align-items:center;padding:10px 12px;background:#fff;border:0.5px solid #e0e0dc;border-radius:8px;cursor:pointer}
 .year-summary::-webkit-details-marker{display:none}
@@ -43,19 +48,25 @@ h1{font-size:18px;font-weight:600;margin-bottom:2px;color:#0f6e56}
 </style>
 </head>
 <body>
-<h1>テニス試合結果</h1>
-<div class="sub">全230件　更新: 2026/06/16 19:02</div>
+<h1>福岡＋αテニス試合情報結果</h1>
+<div class="sub">全228件　更新: 2026/06/16 22:12</div>
+<a class="link-btn" href="https://hiro-ito1.github.io/fukuoka-ten-shi/" target="_blank" rel="noopener"><i class="ti ti-calendar-event"></i>試合情報サイトを見る<i class="ti ti-external-link"></i></a>
+<div class="cat-tabs">
+<button class="cat-tab active" onclick="setCat(this,'all')">すべて</button>
+<button class="cat-tab" onclick="setCat(this,'a')">一般</button>
+<button class="cat-tab" onclick="setCat(this,'j')">ジュニア</button>
+</div>
 <details class="year" open>
   <summary class="year-summary">
     <span class="year-label">2026年</span>
-    <span class="year-count">42件</span>
+    <span class="year-count">40件</span>
     <i class="ti ti-chevron-down year-chev"></i>
   </summary>
   <div class="year-body">
     <div class="filter-row">
       <input type="text" placeholder="人物名で検索..." oninput="filt(this)">
       <select onchange="filt(this)"><option value="">月▾</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option></select>
-      <select onchange="filt(this)"><option value="">主催▾</option><option value="筑ロ">筑ロ</option><option value="パシ">パシ</option><option value="春日">春日</option><option value="糸島">糸島</option></select>
+      <select onchange="filt(this)"><option value="">主催▾</option><option value="筑ロ">筑ロ</option><option value="春日">春日</option><option value="パシ">パシ</option><option value="糸島">糸島</option></select>
     </div>
     <div class="cards">
 <div class="card" data-search="優勝 吉岡､新形(糸島テニスクラブ)
@@ -85,36 +96,6 @@ h1{font-size:18px;font-weight:600;margin-bottom:2px;color:#0f6e56}
 <div class="dt">筑紫野ローンテニスクラブ</div>
 <div class="dl">結果ページ</div>
 <div class="dt"><a href="https://chikushinotennis.web.fc2.com/ebisucup.html" target="_blank" rel="noopener">元ページを開く ↗</a></div>
-  </div>
-</div>
-<div class="card" data-search=" " data-month="6" data-org="パシ" data-cat="a">
-  <div class="card-front" onclick="tog(this)">
-    <div class="row1">
-      <span class="date">06/08（月）</span><span class="org">パシ</span><span class="ba">一般</span><span class="title a">本日20:30からガチンコ庭球塾雨中止のご案内</span>
-    </div>
-    <i class="ti ti-chevron-down chev"></i>
-    <div class="row2"></div>
-  </div>
-  <div class="detail">
-<div class="dl">主催</div>
-<div class="dt">福岡パシフィックテニスアカデミー</div>
-<div class="dl">結果ページ</div>
-<div class="dt"><a href="https://ameblo.jp/pacifictennisevent/entry-12968979398.html" target="_blank" rel="noopener">元ページを開く ↗</a></div>
-  </div>
-</div>
-<div class="card" data-search=" " data-month="6" data-org="パシ" data-cat="a">
-  <div class="card-front" onclick="tog(this)">
-    <div class="row1">
-      <span class="date">06/08（月）</span><span class="org">パシ</span><span class="ba">一般</span><span class="title a">本日19時半からの初級クラス雨中止のご案内です</span>
-    </div>
-    <i class="ti ti-chevron-down chev"></i>
-    <div class="row2"></div>
-  </div>
-  <div class="detail">
-<div class="dl">主催</div>
-<div class="dt">福岡パシフィックテニスアカデミー</div>
-<div class="dl">結果ページ</div>
-<div class="dt"><a href="https://ameblo.jp/pacifictennisevent/entry-12968968862.html" target="_blank" rel="noopener">元ページを開く ↗</a></div>
   </div>
 </div>
 <div class="card" data-search="優勝：しらお　そうすけ
@@ -7713,14 +7694,21 @@ h1{font-size:18px;font-weight:600;margin-bottom:2px;color:#0f6e56}
 </details>
 <div class="footer">自動収集システム ten-shi-results</div>
 <script>
+let curCat='all';
 function tog(front){
   const d=front.nextElementSibling;
   const c=front.querySelector('.chev');
   const o=d.classList.toggle('open');
   c.classList.toggle('open',o);
 }
-function filt(el){
-  const body=el.closest('.year-body');
+function setCat(btn,cat){
+  curCat=cat;
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.year-body').forEach(applyFilt);
+}
+function filt(el){ applyFilt(el.closest('.year-body')); }
+function applyFilt(body){
   const input=body.querySelector('input');
   const selects=body.querySelectorAll('select');
   const kw=(input.value||'').trim();
@@ -7733,10 +7721,17 @@ function filt(el){
     if(kw && !c.dataset.search.includes(kw)) ok=false;
     if(month && c.dataset.month!==month) ok=false;
     if(org && c.dataset.org!==org) ok=false;
+    if(curCat!=='all' && c.dataset.cat!==curCat) ok=false;
     c.style.display=ok?'':'none';
     if(ok)shown++;
   });
   body.querySelector('.no-result').style.display=shown?'none':'block';
+  const year=body.closest('.year');
+  if(year){
+    year.style.display=shown?'':'none';
+    const cnt=year.querySelector('.year-count');
+    if(cnt) cnt.textContent=shown+'件';
+  }
 }
 </script>
 </body>
